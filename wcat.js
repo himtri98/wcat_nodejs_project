@@ -27,7 +27,7 @@ for(let i=0; i<filesArr.length;i++)
         return;
     }
 }
-// to display the content of file
+// storing all the contents of files
 let content = "";
 for(let i=0; i<filesArr.length;i++){
     content = content + fs.readFileSync(filesArr[i]) + "\r\n";
@@ -67,7 +67,7 @@ if(optionArr.includes("-n")&&optionArr.includes("-b")){
     }
 }
 
-
+// for -n
 if(optionArr.includes("-n") && (check == 1 || check ==0)){
     for(let i=0 ; i<newArr.length;i++)
     {
@@ -75,6 +75,7 @@ if(optionArr.includes("-n") && (check == 1 || check ==0)){
     }
 }
 
+// for -b
 if(optionArr.includes("-b") && (check == 2 || check == 0)){
     counter =1;
     for(let i=0;i<newArr.length;i++)
@@ -86,4 +87,5 @@ if(optionArr.includes("-b") && (check == 2 || check == 0)){
     }
 }
 
+// at last join the array
 console.log(newArr.join("\n"));
